@@ -18,7 +18,10 @@ with argparse!
 
   with \option "-v --version"
     \description "Prints the ccrunx-image version"
-    \action -> print "ccrunx-image 0.1"
+    \action -> print "ccrunx-image 0.2"
+
+  with \flag "--embed"
+    \description "Embeds the command in another such as ccrunx-compose"
 
   with \command "compress c"
     \description "Compress an instance"
@@ -39,21 +42,21 @@ with argparse!
 switch argl.action
   when "compress"
     env = argl.environment
-    print arrow "Compressing environment #{env} at .ccrunx/#{env}"
+    print arrow "#{argl.embed and "  " or ""}Compressing environment #{env} at .ccrunx/#{env}"
     --> Use zip -r
     zip = io.popen "zip ccrunx-image_#{env}.ccrunx -r #{env} .ccrunx/#{env}"
     for line in zip\lines!
-      print bullet line
+      print bullet (argl.embed and "   " or "") .. line
     zip\close!
     --
-    print arrow "Created archive ccrunx-image_#{env}.ccrunx"
+    print arrow "#{argl.embed and "  " or ""}Created archive ccrunx-image_#{env}.ccrunx"
   when "decompress"
     file = argl.file
-    print arrow "Decompressing image #{file}"
+    print arrow "#{argl.embed and "  " or ""}Decompressing image #{file}"
     --> Use unzip
     unzip = io.popen "unzip #{file}"
     for line in unzip\lines!
-      print bullet line
+      print bullet (argl.embed and "   " or "") .. line
     unzip\close!
     --
-    print arrow "Decompressed image #{file}"
+    print arrow "#{argl.embed and "  " or ""}Decompressed image #{file}"

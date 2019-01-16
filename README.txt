@@ -1,10 +1,11 @@
-Usage: ccrunx-image [-v <version>] [-h] <command> ...
+Usage: ccrunx-image [-v <version>] [--embed] [-h] <command> ...
 
 Package instances of CCRunX instances
 
 Options:
           -v <version>,  Prints the ccrunx-image version
    --version <version>
+   --embed               Embeds the command in another such as ccrunx-compose
    -h, --help            Show this help message and exit.
 
 Commands:
