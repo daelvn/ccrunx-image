@@ -18,7 +18,7 @@ with argparse!
 
   with \option "-v --version"
     \description "Prints the ccrunx-image version"
-    \action -> print "ccrunx-image 0.2"
+    \action -> print "ccrunx-image 0.3"
 
   with \flag "--embed"
     \description "Embeds the command in another such as ccrunx-compose"

@@ -1,8 +1,8 @@
 package = "ccrunx-image"
-version = "0.2-1"
+version = "0.3-1"
 source = {
   url = "git+ssh://git@github.com/daelvn/ccrunx-image.git",
-  tag = "v0.2"
+  tag = "v0.3"
 }
 description = {
   summary = "Create packages for CCRunX environments",
@@ -17,7 +17,7 @@ build = {
   type = "builtin",
   install = {
     bin = {
-      ["ccrunx-image"] = "ccrunx-image"
+      ["ccrunx-image"] = "ccrunx-image.lua"
     }
   },
   copy_directories = {
