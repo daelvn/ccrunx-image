@@ -19,7 +19,7 @@ build = {
     bin = {
       ["ccrunx-image"] = "ccrunx-image"
     }
-  }
+  },
   copy_directories = {
     "docs"
   }
