@@ -15,6 +15,7 @@ dependencies = {
 }
 build = {
   type = "builtin",
+  modules = {},
   install = {
     bin = {
       ["ccrunx-image"] = "ccrunx-image.lua"
