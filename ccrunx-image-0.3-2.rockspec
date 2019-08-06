@@ -1,5 +1,5 @@
 package = "ccrunx-image"
-version = "0.3-1"
+version = "0.3-2"
 source = {
   url = "git+ssh://git@github.com/daelvn/ccrunx-image.git",
   tag = "v0.3"
@@ -7,7 +7,6 @@ source = {
 description = {
   summary = "Create packages for CCRunX environments",
   homepage = "https://github.com/daelvn/ccrunx-image",
-  license = "MIT/X11"
 }
 dependencies = {
   "argparse",
